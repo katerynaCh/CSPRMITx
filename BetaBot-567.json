@@ -1,0 +1,50 @@
+{
+	"test_info": {
+	  "test_name": "BetaBot-567",
+	  "sample_filename": "0000be8f1fcdca1ad631fd09b36bf598c7ac4e76ffd71aa37b7c8dbdb44ccad3",
+	  "sample_sha1": "1c80da314a7441319f8ee340bf49c53a623d569d",
+	  "sample_sha256": "0000be8f1fcdca1ad631fd09b36bf598c7ac4e76ffd71aa37b7c8dbdb44ccad3",
+	  "sample_url": "http://5.9.148.110:13337/file/sample/562501d81a35005f57dd915d/",
+	  "cuckoo_options": "json.calls=0"
+	},
+	"tests": {
+	  "check_md5": "c2279a759e445447bc98ec187c9236fb",
+	  "check_sha1": "1c80da314a7441319f8ee340bf49c53a623d569d",
+	  "check_sha256": "0000be8f1fcdca1ad631fd09b36bf598c7ac4e76ffd71aa37b7c8dbdb44ccad3",
+	  "check_sha512": "59a1afec403715840ea832e060daf2c5669aa0118921a97f800af7651696693c414420ca385008a3185e35c767ae1322f1e6da25d9677aee0dd7a4440d54d080",
+      "check_expected_files_opened": [
+        "C:\\Documents and Settings\\Administrator\\Local Settings\\Temp\\0000be8f1fcdca1ad631fd09b36bf598c7ac4e76ffd71aa37b7c8dbdb44ccad3.exe"
+      ],
+      "check_expected_regkeys_opened": [
+        "HKEY_CLASSES_ROOT\\*",
+        "HKEY_CLASSES_ROOT\\.exe",
+        "HKEY_CLASSES_ROOT\\CLSID\\{20D04FE0-3AEA-1069-A2D8-08002B30309D}\\InProcServer32",
+        "HKEY_CLASSES_ROOT\\Drive\\shellex\\FolderExtensions\\{fbeb8a05-beee-4442-804e-409d6c4515e9}",
+        "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\ShellCompatibility\\Objects\\{20D04FE0-3AEA-1069-A2D8-08002B30309D}",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\Setup",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion",
+        "HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Setup"
+      ],
+	  "check_expected_processes": {
+		"0000be8f1fcdca1ad631fd09b36bf598c7ac4e76ffd71aa37b7c8dbdb44ccad3.exe": 1
+	  },
+      "check_expected_dll_loaded": [
+        "UxTheme.dll",
+        "C:\\WINDOWS\\system32\\SHELL32.dll",
+        "kernel32",
+        "ntdll",
+        "kernel32.dll",
+        "uxtheme.dll",
+        "SHELL32.dll",
+        "ole32.dll",
+        "SETUPAPI.dll",
+        "user32.dll",
+        "C:\\WINDOWS\\system32\\uxtheme.dll"
+      ],
+	  "check_expected_api_calls": {
+		"NtAllocateVirtualMemory": 1,
+        "RegQueryValueExW": 1
+	  }
+	}
+}
